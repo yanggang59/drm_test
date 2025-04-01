@@ -4,7 +4,7 @@ DEFAULT_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 OUTPUT_DIR := $(DEFAULT_DIR)/output
 SRCS := $(wildcard $(DEFAULT_DIR)/*.c)
 TARGETS := $(patsubst %.c, $(OUTPUT_DIR)/%, $(notdir $(SRCS)))
-DRM_INCLUDE_DIR := /usr/local/include/libdrm
+DRM_INCLUDE_DIR := /usr/include/drm
 DRM_LIB_DIR := /usr/local/lib
 CFLAGS := -I $(DRM_INCLUDE_DIR) -ldrm
 
